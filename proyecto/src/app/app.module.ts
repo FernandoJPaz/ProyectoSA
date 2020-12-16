@@ -9,6 +9,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ClienteComponent } from './components/cliente/cliente.component';
+import { ProveedorComponent } from './components/proveedor/proveedor.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,11 +22,16 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ClienteComponent,
+    ProveedorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
